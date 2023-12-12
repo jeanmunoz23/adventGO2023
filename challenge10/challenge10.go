@@ -1,11 +1,10 @@
-package main
+package challenge10
 
 import (
-	"fmt"
 	"strings"
 )
 
-func createChristmasTree(ornaments string, height int) string {
+func CreateChristmasTree(ornaments string, height int) string {
 	tree := ""
 	ornament := 0
 	for i := 0; i < height; i++ {
@@ -22,16 +21,4 @@ func createChristmasTree(ornaments string, height int) string {
 	}
 	tree += strings.Repeat(" ", height-1) + "|\n"
 	return tree
-}
-
-func main() {
-	// Ejemplos de uso:
-	tree := createChristmasTree("123", 4)
-	fmt.Println(tree)
-
-	tree = createChristmasTree("*@o", 3)
-	fmt.Println(tree)
-	// Ejemplos de uso:
-	tree = createChristmasTree("xo", 4)
-	fmt.Println(tree)
 }
