@@ -1,10 +1,6 @@
-package main
+package challenge03
 
-import (
-	"fmt"
-)
-
-func findNaughtyStep(original string, modified string) string {
+func FindNaughtyStep(original string, modified string) string {
 	var larger, shorter string
 	if len(original) >= len(modified) {
 		larger, shorter = original, modified
@@ -22,21 +18,4 @@ func findNaughtyStep(original string, modified string) string {
 	}
 
 	return ""
-}
-
-func main() {
-	original := "abcd"
-	modified := "abcde"
-	result := findNaughtyStep(original, modified) // "e"
-	fmt.Println(result)
-
-	original = "stepfor"
-	modified = "stepor"
-	result = findNaughtyStep(original, modified) // "f"
-	fmt.Println(result)
-
-	original = "abcde"
-	modified = "abcde"
-	result = findNaughtyStep(original, modified) // ""
-	fmt.Println(result)
 }
