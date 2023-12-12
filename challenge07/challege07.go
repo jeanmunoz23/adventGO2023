@@ -1,11 +1,10 @@
-package main
+package challenge07
 
 import (
-	"fmt"
 	"strings"
 )
 
-func drawGift(size int, symbol string) string {
+func DrawGift(size int, symbol string) string {
 	if size < 2 {
 		return strings.Repeat("#", size) + "\n"
 	}
@@ -43,38 +42,4 @@ func reverse(lines []string) []string {
 		newLines = append(newLines, lines[i])
 	}
 	return newLines
-}
-
-func main() {
-	result := drawGift(4, "+")
-	fmt.Println(result)
-	/*
-	      ####
-	     #++##
-	    #++#+#
-	   ####++#
-	   #++#+#
-	   #++##
-	   ####
-	*/
-
-	result = drawGift(5, "*")
-	fmt.Println(result)
-	/*
-	       #####
-	      #***##
-	     #***#*#
-	    #***#**#
-	   #####***#
-	   #***#**#
-	   #***#*#
-	   #***##
-	   #####
-	*/
-
-	result = drawGift(1, "^")
-	fmt.Println(result)
-	/*
-	   #
-	*/
 }
