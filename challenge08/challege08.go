@@ -1,4 +1,4 @@
-package main
+package challenge08
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 	"strconv"
 )
 
-func organizeGifts(gifts string) string {
+func OrganizeGifts(gifts string) string {
 	const boxSize = 10
 	const palletSize = 5 * boxSize
 
@@ -50,9 +50,4 @@ func repeatString(s string, n int) string {
 		result += s
 	}
 	return result
-}
-func main() {
-	result := organizeGifts(`76a11b`)
-	fmt.Println(result) // "[a]{a}{a}(aaaaaa){b}(b)"
-
 }

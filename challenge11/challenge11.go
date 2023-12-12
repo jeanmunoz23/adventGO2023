@@ -1,4 +1,4 @@
-package main
+package challenge11
 
 import (
 	"fmt"
@@ -25,7 +25,7 @@ func getIndexsForPalindromeVGO(word string) []int {
 }
 
 // simulando lo mismo que da en nodejs
-func getIndexsForPalindrome(word string) string {
+func GetIndexsForPalindrome(word string) string {
 	if word == reverseString(word) {
 		return "[]"
 	}
@@ -59,14 +59,4 @@ func isPalindrome(s string) bool {
 		}
 	}
 	return true
-}
-
-func main() {
-	fmt.Println(getIndexsForPalindrome("anna"))      // []
-	fmt.Println(getIndexsForPalindrome("abab"))      // [0, 1]
-	fmt.Println(getIndexsForPalindrome("abac"))      // null
-	fmt.Println(getIndexsForPalindrome("aaaaaaaa"))  // []
-	fmt.Println(getIndexsForPalindrome("aaababa"))   // [1, 3]
-	fmt.Println(getIndexsForPalindrome("caababa"))   // null
-	fmt.Println(getIndexsForPalindrome("rotaratov")) // [4, 8]
 }

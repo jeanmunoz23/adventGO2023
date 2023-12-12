@@ -1,10 +1,6 @@
-package main
+package challenge09
 
-import (
-	"fmt"
-)
-
-func adjustLights(lights []string) int {
+func AdjustLights(lights []string) int {
 	changes := 0
 
 	for i := 0; i < len(lights); i++ {
@@ -22,23 +18,4 @@ func adjustLights(lights []string) int {
 	}
 
 	return changes
-}
-
-func main() {
-	lights := []string{"🟢", "🔴", "🟢", "🟢", "🟢"}
-	result := adjustLights(lights)
-	fmt.Println(result)
-	// -> 1 (cambias la cuarta luz a 🔴)
-
-	lights = []string{"🔴", "🔴", "🟢", "🟢", "🔴"}
-	result = adjustLights(lights)
-	fmt.Println(result) // -> 2 (cambias la segunda luz a 🟢 y la tercera a 🔴)
-
-	lights = []string{"🟢", "🔴", "🟢", "🔴", "🟢"}
-	result = adjustLights(lights)
-	fmt.Println(result) // -> 0 (ya están alternadas)
-
-	lights = []string{"🔴", "🔴", "🔴"}
-	result = adjustLights(lights)
-	fmt.Println(result) // -> 1 (cambias la segunda luz a 🟢)
 }
