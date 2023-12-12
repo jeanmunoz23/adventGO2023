@@ -1,10 +1,6 @@
-package main
+package challenge06
 
-import (
-	"fmt"
-)
-
-func maxDistance(movements string) int {
+func MaxDistance(movements string) int {
 	derecha := 0
 	izquierda := 0
 	extras := 0
@@ -24,18 +20,4 @@ func maxDistance(movements string) int {
 		result = izquierda + extras - derecha
 	}
 	return result
-}
-
-func main() {
-	movements := ">>*<"
-	result := maxDistance(movements)
-	fmt.Println(result) // -> 2
-
-	movements = "<<<>"
-	result = maxDistance(movements)
-	fmt.Println(result) // -> 2
-
-	movements = ">***>"
-	result = maxDistance(movements)
-	fmt.Println(result) // -> 5
 }

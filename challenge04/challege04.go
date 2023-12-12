@@ -1,11 +1,10 @@
-package main
+package challenge04
 
 import (
-	"fmt"
 	"regexp"
 )
 
-func decode(message string) string {
+func Decode(message string) string {
 	regex := regexp.MustCompile(`\(([^()]*)\)`)
 
 	for regex.MatchString(message) {
@@ -26,19 +25,4 @@ func reverseString(s string) string {
 	}
 
 	return string(runes)
-}
-
-func main() {
-	result := decode("hola (odnum)")
-	fmt.Println(result) // hola mundo
-
-	result = decode("(olleh) (dlrow)!")
-	fmt.Println(result) // hello world!
-
-	result = decode("sa(u(cla)atn)s")
-	fmt.Println(result) // santaclaus
-
-	// Paso a paso:
-	// 1. Invertimos el anidado -> sa(ualcatn)s
-	// 2. Invertimos el que queda -> santaclaus
 }
