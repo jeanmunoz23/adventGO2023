@@ -2,5 +2,5 @@
 En este repositorio pasare los ejercicios resueltos en Adventjs2023 que esta en JS&amp;TS a Go.
 
 > [!Important]
-> Para participar del desafio acceder a [🎄AdventJS](https://adventjs.dev/es)
-> Ejercicios solucionados en JS&amp;TS [adventjs2023](https://github.com/jeanmunoz23/adventjs2023)
+> Para participar del desafio acceder a [🎄AdventJS 2023](https://adventjs.dev/es)
+> Ejercicios solucionados en JS&amp;TS [JS&amp;TS](https://github.com/jeanmunoz23/adventjs2023)
